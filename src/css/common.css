@@ -22,3 +22,43 @@ button {
   padding: 8px 12px;
   cursor: pointer;
 }
+.gallery {
+  list-style: none;
+  gap: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.picture {
+  border-radius: 10%;
+  width: 400px;
+  height: 300px;
+}
+
+.picture:hover {
+  box-shadow: 6px 8px 10px rgba(0, 0, 0, 0.16), 6px 8px 10px rgba(0, 0, 0, 0.16),
+    6px 8px 10px rgba(0, 0, 0, 0.16), 6px 8px 10px rgba(0, 0, 0, 0.16);
+  transition: transform 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+ul {
+  list-style: none;
+}
+
+a {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 10px;
+  border: solid black;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: black;
+  display: inline-flex;
+  flex-direction: column;
+  text-decoration: none;
+}
+
+a:hover {
+  border: solid blue;
+  background-color: yellow;
+  color: blue;
+}
