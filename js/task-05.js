@@ -3,14 +3,14 @@
 // Якщо інпут порожній, у спані повинен відображатися рядок "Anonymous".
 
 
-const textInput = document.querySelector('#name-input');
-const textOutput = document.querySelector('#name-output');
+const inputEl = document.querySelector('#name-input');
+const outputEl = document.querySelector('#name-output');
 
-textInput.addEventListener('input', handleInputChange);
+inputEl.addEventListener('input', handleInputChange);
 
 function handleInputChange(event) {
-  textOutput.textContent = event.currentTarget.value;
+  outputEl.textContent = event.currentTarget.value;
   if (event.currentTarget.value.trim() === '') {
-    textOutput.textContent = 'Anonymous';
+    outputEl.textContent = 'Anonymous';
   }
 }
