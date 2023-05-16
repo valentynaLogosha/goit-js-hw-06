@@ -7,15 +7,12 @@
 
 const textInput = document.querySelector('#validation-input');
 
+const updateInputClass = (isValid) => {
+  textInput.classList.toggle('valid', isValid);
+  textInput.classList.toggle('invalid', !isValid);
+};
+
 textInput.addEventListener('blur', event => {
-  if (
-    event.currentTarget.value.length ===
-    Number(event.currentTarget.dataset.length)
-  ) {
-    textInput.classList.add('valid');
-    textInput.classList.remove('invalid');
-  } else {
-    textInput.classList.add('invalid');
-    textInput.classList.remove('valid');
-  }
+  const isValidLength = event.currentTarget.value.length === Number(event.currentTarget.dataset.length);
+  updateInputClass(isValidLength);
 });
